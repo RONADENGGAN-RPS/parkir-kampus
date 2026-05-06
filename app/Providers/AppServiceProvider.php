@@ -2,29 +2,23 @@
 
 namespace App\Providers;
 
-use Illuminate\Auth\Events\Login;
-use Illuminate\Auth\Events\Failed;
-use App\Listeners\LogSuccessfulLogin;
-use App\Listeners\LogFailedLoginAttempt;
-use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    protected $listen = [];
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
+    }
 
+    /**
+     * Bootstrap any application services.
+     */
     public function boot(): void
     {
-        parent::boot();
-
-        Event::listen(
-            Login::class,
-            [LogSuccessfulLogin::class, 'handle']
-        );
-
-        Event::listen(
-            Failed::class,
-            [LogFailedLoginAttempt::class, 'handle']
-        );
+        //
     }
 }
