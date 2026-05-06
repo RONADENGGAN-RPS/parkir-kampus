@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class LogAktivitas extends Model
+{
+    protected $fillable = [
+        'user_id',
+        'action',
+        'module',
+        'description',
+        'ip_address',
+        'user_agent',
+        'data',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
