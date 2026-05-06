@@ -9,7 +9,7 @@ use App\Listeners\LogFailedLoginAttempt;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
 
-class AppEventServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider
 {
     protected $listen = [];
 
